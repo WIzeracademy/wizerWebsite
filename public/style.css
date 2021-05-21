@@ -1,0 +1,29 @@
+body{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+    /* Here Overflow hidden will help in the text that is with cursor will not show when cursor crosses the window */
+    overflow: hidden;
+    cursor: none;
+
+  
+}
+#text{
+    font-size: 3rem;
+    /* Position absolute will make the h2 it uses the document body as parent (positioned) ancestor */
+    position: absolute;
+    /* Transition property will specify the duration in which the change will happen in the property  */
+    transition: o.1ms;
+    /* Transform has been used to make the text g in centre with the mouse cursor */
+    transform: translate(-50%,-50%);
+    /* Pointer Event: NONE will ignore any pointer event in the text*/
+    pointer-events: none;
+
+    /* White space No Wrap would avoid wrapping in the right side of the body */
+    white-space: nowrap;
+    
+}   
