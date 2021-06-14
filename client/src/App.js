@@ -25,6 +25,8 @@ const theme = createMuiTheme({
 });
 
 const Dashboard = () => <h2>Dashboard</h2>;
+const paymentMade = () => <h2>Thankyou For the payment</h2>;
+
 const SurveyNew = () => <h2>SirveyNew</h2>;
 
 class App extends Component {
@@ -42,6 +44,8 @@ class App extends Component {
               <Route exact path="/" component={Landing}></Route>
               <Route exact path="/dashboard" component={Dashboard}></Route>
               <Route exact path="/developing" component={Developing}></Route>
+              <Route exact path="/paymentMade" component={paymentMade}></Route>
+
               <Footer></Footer>
             </div>
           </BrowserRouter>

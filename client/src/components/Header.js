@@ -5,6 +5,7 @@ import Grid from "@material-ui/core/Grid";
 import { makeStyles } from "@material-ui/core/styles";
 import logo from "../static/logo.jpg";
 import MaterialLink from "@material-ui/core/Link";
+import Payment from "./Payment.js";
 
 import { Avatar, Button, Typography } from "@material-ui/core";
 import { Link } from "react-router-dom";
@@ -29,13 +30,15 @@ const useStyles = makeStyles((theme) => ({
   },
   navButton: {
     color: "#FFF5D1",
+    margin: "0 10px",
   },
 }));
 
 function Header(props) {
   const classes = useStyles();
 
-  const renderContent = () => {
+  const renderLogin = () => {
+    console.log(props.auth, "this is auth");
     switch (props.auth) {
       case null:
         return "Still Logging";
@@ -104,7 +107,12 @@ function Header(props) {
             <NavTab text="schedule"></NavTab>
           </Grid>
         </Grid>
-        <Grid item>{renderContent()}</Grid>
+        <Grid item>
+          <Grid container>
+            <Payment></Payment>
+            <Grid item>{renderLogin()}</Grid>
+          </Grid>
+        </Grid>
       </Grid>
     </div>
   );
